@@ -312,7 +312,6 @@ ul.services-content {
 
 .img-serv{
 	transition: 0.25s;
-
 	&:hover { 
     border-color: var(--hover);
 }
@@ -324,11 +323,6 @@ ul.services-content {
   }
 
 
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 @media (max-width:1000px) {
 	.services-content li {
