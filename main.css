@@ -207,6 +207,12 @@ ul.about-content {
 .about-right h2 {
 	font-size: 35px;
 }
+
+.about-right p {
+	font-size: 17px;
+	text-align: justify;
+
+}
 .about-area p {
 	max-width: 800px;
 	margin-bottom: 35px;
@@ -216,7 +222,7 @@ ul.about-content {
 }
 .section-title {
 	text-transform: uppercase;
-	font-size: 50px;
+	font-size: 55px;
 	margin-bottom: 5%;
 }
 .section-title span {
@@ -254,6 +260,20 @@ ul.about-content {
 	color: #fff;
 	text-align: center;
 }
+
+.msg-content h1 {
+	font-size: 35px;
+}
+
+.mission {
+	font-size: 18px;
+	font-style: italic;
+}
+
+.join {
+	font-weight: bold;
+	font-size: 20px;
+}
 /*service area*/
 
 ul.services-content {
@@ -285,16 +305,42 @@ ul.services-content {
 .services-content li p {
 	margin: 0;
 }
+.services-list {
+	margin-bottom: 20px;
+
+  }
+
+.img-serv{
+	transition: 0.25s;
+
+	&:hover { 
+    border-color: var(--hover);
+}
+}
+
+.img-serv:hover {
+	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	transform: translateY(-0.25em);
+  }
+
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
 @media (max-width:1000px) {
 	.services-content li {
 		flex-basis: 100%;
-		margin-bottom: 65px;
+		margin-bottom: 50px;
 	}
 	.services-content li:last-child {
 		margin-bottom: 0;
 	}
 	.services-content li p {
 		padding: 0;
+		margin-bottom: 20px;
 	}
 }
 /*contact area*/
