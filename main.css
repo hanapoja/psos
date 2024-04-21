@@ -20,8 +20,9 @@ a {
 h1 {
 	font-size: 50px;
 }
+
 header {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 10;
@@ -34,8 +35,16 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	color: #fff;
-	padding: 35px 100px 0;
+	padding: 40px 100px;
+	transition: 0.6s ;
 }
+
+header.sticky {
+	padding: 7px 100px;
+	background-color: #805D2E;
+}
+
+
 header h2 span {
 	color: #805D2E ;
 }
@@ -45,16 +54,25 @@ header ul.nav {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	transition: background-color 0.4s ease-in-out;
+
 }
 header ul.nav li  {
 	margin: 0 15px;
 	font-size: 18px;
+	padding-left: 10px;
+	transition: background-color 0.4s ease-in-out;
+
 }
 header ul.nav li:first-child {
 	margin-left: 0;
+	transition: background-color 0.4s ease-in-out;
+
 }
 header ul.nav li:last-child {
 	margin-right: 0;
+	transition: background-color 0.4s ease-in-out;
+
 }
 
 
@@ -321,11 +339,13 @@ ul.services-content {
 	display: block;
 	text-align: left;
 	font-size: 15px;
+	
 }
 
 .dropdown {
 	float: left;
 	overflow: hidden;
+	
 }
 
 .dropdown .services-btn {
@@ -342,6 +362,7 @@ ul.services-content {
 .dropdown-services a:hover {
 	background-color: #805D2E;
 	color: #fff;
+	
 }
 
 .dropdown:hover .dropdown-services {
@@ -361,16 +382,17 @@ ul.services-content {
 
 
 .img-serv{
-	transition: 0.25s;
-	&:hover { 
-    border-color: var(--hover);
-}
+	transition: box-shadow .3s;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	float: left;
+
 }
 
 .img-serv:hover {
-	box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transform: translateY(-0.25em);
-  }
+}
 
 
 
