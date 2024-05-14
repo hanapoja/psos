@@ -18,9 +18,9 @@
 			<li class ="dropdown">
 				<a href="#services">Services</a></button>
 				<div class="dropdown-services">
-					<a href="mass_intention.html" target="_blank">Mask Intentions</a>
-					<a href="baptism.html" target="_blank">Baptism</a>
-					<a href="funeral.html" target="_blank">Funeral</a>
+					<a href="mass_intention.html" onclick="openPopup('mass_intention.html'); return false;">Mass Intentions</a>
+					<a href="baptism.html" onclick="openPopup('baptism.html'); return false;">Baptism</a>
+					<a href="funeral.html" onclick="openPopup('funeral.html'); return false;">Funeral</a>
 					<a href="wedding.html" target="_blank">Wedding</a>
 					<a href="prayerintentions.html" target="_blank">Prayer Intentions</a>
 					<a href="#other-services">Other Services</a>
@@ -72,17 +72,22 @@
 		<h3 class="section-title">Our <span>Services</span></h3>
 		<ul class="services-content">
 			<li class="services-list">
-				<a href ="mass_intention.html" target="_blank">
-				<img alt="" src="images/1.jpg" class="img-serv"><h4>mass intentions</h4></a>
+				<a href="mass_intention.html" onclick="openPopup('mass_intention.html'); return false;">
+					<img alt="" src="images/1.jpg" class="img-serv">
+					<h4>mass intentions</h4>
+				</a>
 			</li>
 			<li class="services-list">
-				<a href ="baptism.html" target="_blank">
-				<img alt="" src="images/7.jpg" class="img-serv" href ="baptism.html">
-				<h4>baptism</h4></a>
+				<a href="baptism.html" onclick="openPopup('baptism.html'); return false;">
+					<img alt="" src="images/7.jpg" class="img-serv">
+					<h4>baptism</h4></a>
+				</a>
 			</li>
 			<li class="services-list" >
-				<a href ="funeral.html" target="_blank">
-				<img alt="" src="images/8.jpg" class="img-serv" href ="funeral.html"><h4>funeral</h4></a>
+				<a href="funeral.html" onclick="openPopup('funeral.html'); return false;">
+				<img alt="" src="images/8.jpg" class="img-serv">
+				<h4>funeral</h4></a>
+				</a>
 			</li>
             <li class="services-list">
 				<a href ="wedding.html">
@@ -127,6 +132,19 @@
 		var header = document.querySelector("header");
 		header.classList.toggle("sticky", window.scrollY > 0);
 	})
+
+	function openPopup(url) {
+        var modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = '<div class="modal-content"><span class="close" onclick="closePopup()">&times;</span><iframe src="' + url + '" frameborder="0"></iframe></div>';
+        document.body.appendChild(modal);
+    }
+
+    function closePopup() {
+        var modal = document.querySelector('.modal');
+        modal.parentNode.removeChild(modal);
+    }
+
 </script>
 </body>
 </html>
