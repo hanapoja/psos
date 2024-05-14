@@ -43,25 +43,39 @@
     <div class>
     <section class="banner-area">
         <div class="login">
-            <h1>USER LOG-IN</h1>
-            <h3>Enter your login credentials</h3>
+            <h1>Create your account</h1>
             <form action="">
                 <label for="first">
-                      Username:
+                      Full Name:
                   </label>
                 <input type="text"
-                       id="first"
-                       name="first"
-                       placeholder="Enter your Username" required>
+                       id="fullname"
+                       name="fullname"
+                       placeholder="Enter your full name" required>
      
+                <label for="email">
+                      Email:
+                  </label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Enter your email" required>
+                    
+                       <label for="username">
+                        Username:
+                    </label>
+                  <input type="text"
+                         id="username"
+                         name="username"
+                         placeholder="Create your username" required>  
+
                 <label for="password">
                       Password:
                   </label>
                 <input type="password"
                        id="password"
                        name="password"
-                       placeholder="Enter your Password" required>
-     
+                       placeholder="Create your password" required>       
                 <div class="wrap">
                     <button type="submit"
                             onclick="solve()">
@@ -69,8 +83,8 @@
                     </button>
                 </div>
             </form>
-            <p>Don't have an account? 
-                  <a href="#create_acc"
+            <p>Already have an account 
+                  <a href="#admin"
                    style="font-weight: bolder;">
                     Click here.
                 </a><br>
